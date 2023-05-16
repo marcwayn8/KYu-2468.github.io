@@ -34,12 +34,10 @@ const Info = () => {
       <Title>Full-Stack Software Engineer</Title>
       <div className="flex flex-wrap">
         <Content>
-          Meet Kevin, a software engineer with 5+ years in RF test engineering
-          who self-taught programming to improve work productivity. He graduated
-          from Fullstack Academy, a Forbes' top 10 software engineering
-          bootcamp, and currently ranks top 8.4% among 393,066 global
+          Meet Wayne, a software engineer at Verisk Analystics with 2+ years in software engineering
+          A graduate from the Marcy Lab School Software Engineering Bootcamp, a 1-year alternative to college.Wayne currently ranks in the top 8.4% among 393,066 global
           contestants in LeetCode's Global Competitive programming competition.
-          Kevin values collaboration, positivity, and a non-toxic work
+          Wayne values collaboration, positivity, and a non-toxic work
           environment, and enjoys researching solutions and debugging. He's
           passionate about contributing to industries with a positive impact on
           people's well-being and could be a great addition to your team.
@@ -50,3 +48,4 @@ const Info = () => {
 };
 
 export default About;
+

@@ -7,7 +7,7 @@ const profileImg = "./img/profile-img-square.webp";
 const About = () => {
   return (
     <>
-      <SectionTitle>About me</SectionTitle>
+      <SectionTitle>About Wayne</SectionTitle>
       <div className="flex flex-wrap w-full h-full">
         <Image />
         <Info />

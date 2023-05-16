@@ -5,7 +5,7 @@ import ButtonWrapper from "./Button/ButtonWrapper";
 export default function Calendly() {
   const onClickCalendly = () => {
     window.Calendly.initPopupWidget({
-      url: "https://calendly.com/kevin-yu-2468/20-min-chat?hide_gdpr_banner=1",
+      url: "https://calendly.com/juniormarch48/15min",
     });
   };
 

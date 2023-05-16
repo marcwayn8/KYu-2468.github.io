@@ -34,7 +34,7 @@ const Navbar = ({ sections }: SectionProps) => {
     <div className="fixed z-10 flex items-center justify-between w-screen h-16 text-white bg-black dark:bg-neutral-800">
       <div className="hidden ml-12 text-xl md:text-3xl grow md:block">
         <a href="#landing">
-          <span>Kevin Yu</span>
+          <span>Wayne March</span>
         </a>
       </div>
       <div className="flex text-lg grow flex-nowrap md:text-2xl justify-evenly">

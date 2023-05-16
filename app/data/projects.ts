@@ -10,27 +10,28 @@ const chartMyJog = "./video/chartMyJog.mp4";
 
 const projects: SingleProject[] = [
   {
-    name: "Chart My Jog",
+    name: "NoNoiseNYC",
     description:
-      "Chart My Jog is a fitness application built with React, Tailwind, Material UI, Firebase, Firestore, Mapbox API, Leaflet, React-leaflet, and Geolocation API. Chart My Jog helps users track and record their jogs in real-time and render their route on a digital map. Users can view and share their accomplishments and track their progress throughout their lifetime.",
-    github: "https://github.com/KYu-2468/ChartMyJog",
-    website: "https://chart-my-jog.web.app/",
+      "Created a Full-stack community-based networking application that allows users to interactively see noise pollution levels across  all five boroughs of New York City. Users are also able to post questions and privately chat with each other about how noise pollution affects their lives on a daily basis.. Users can also make complaints about noise pollution levels.",
+    github: "https://github.com/NoNoise-NYC",
+    website: "https://jamaicancoder.com",
     video: chartMyJog,
   },
   {
-    name: "RF Training",
+    name: "Marcy Chat",
     description:
-      "RF Traning Website is an independent project built with React, Tailwind, Windmill, and Firebase. It enabled new SGS hires (Interns, Technicians, and Engineers) to learn 4G/5G RF system operations, improved the efficiency of the onboarding process by 55%, and reduced the cost of training by 65%. Firebase Authentication and Storage Security rules are implemented to protect sensitive materials from unauthorized personnel.",
+      "Created a Full-stack social media application that made use of JWT(JSON web token) and asynchronous programming with technologies such as PSQL, Knex.js, and Node js where users were able to login securely and make posts that would be seen by the entire Marcy Lab School community",
     github: "https://github.com/KYu-2468/RF-Training",
-    website: "https://rf-training-sgs.web.app/",
+    website: "https://jamaicancoder.com",
     video: rfTrainingSGS,
   },
   {
-    name: "NetfliK",
+    name: "TechView",
     description:
-      "Netflix is one of the most popular streaming services currently available in the market. Netflik is built with React, Tailwind, TMDB API, React-Youtube, and AWS Amplify. All current videos are trailers of the corresponding movies.",
-    github: "https://github.com/KYu-2468/netflixk",
-    website: "https://prod.d3w3n4pah8m9bk.amplifyapp.com",
+      "Created a Full-stack community-based networking application that allows users to post questions and privately chat with each other about their interview process experiences in the tech industry. Users can share the technical interview questions they have been asked to solve or the most common behavioral interview questions they have been asked to help others prepare.",
+      
+    github: "https://github.com/techview-org",
+    website: "https://techview-frontend.netlify.app/",
     video: netflik,
   },
   // {

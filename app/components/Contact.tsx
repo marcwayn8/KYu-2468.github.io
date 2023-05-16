@@ -19,21 +19,33 @@ const Contact = () => {
           text="Linkedin"
           textColor="text-white"
           buttonColor="bg-sky-600"
-          linkURL="https://www.linkedin.com/in/kevinyu2468/"
+          linkURL="https://www.linkedin.com/in/waynemarch/"
         />
 
         <ContactButton
           text="GitHub"
           textColor="text-white"
           buttonColor="bg-black dark:bg-neutral-800"
-          linkURL="https://github.com/KYu-2468"
+          linkURL="https://github.com/marcwayn8"
         />
 
         <ContactButton
           text="LeetCode"
           textColor="text-white"
           buttonColor="bg-red-600"
-          linkURL="https://leetcode.com/KYu-2468/"
+          linkURL="https://leetcode.com/marcwayn8/"
+        />
+        <ContactButton
+          text="Tiktok"
+          textColor="text-black"
+          buttonColor="bg-white-600"
+          linkURL="https://www.tiktok.com/@juniormarch?_t=8cLqtruxPnX&_r=1"
+        />
+        <ContactButton
+          text="Shopify"
+          textColor="text-white"
+          buttonColor="bg-green-600"
+          linkURL="https://jamaicancoder.myshopify.com/"
         />
       </div>
     </>

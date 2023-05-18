@@ -4,7 +4,7 @@ import { useMediaQuery } from "usehooks-ts";
 import LoadingTriangle from "./Loading/LoadingTriangle";
 
 const modelSrc = "kevin-avatar.glb"; // this can be a relative or absolute URL
-const animationSrc = "/male-idle.glb";
+const animationSrc = "kevin-avatar.glb";
 
 export default function KevinAvatar() {
   const isSmallScreen = useMediaQuery("(max-width: 768px)");

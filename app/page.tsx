@@ -3,8 +3,6 @@ import "./globals.css";
 
 import SectionLayout from "./components/SectionLayout";
 
-import { Avatar} from '@readyplayerme/visage';
-
 import Navbar, { SectionProp } from "./components/Navbar";
 import Landing from "./components/Landing";
 
@@ -20,11 +18,6 @@ const sections: SectionProp[] = [
   { name: "Contact", id: "contact", icon: "T", element: <Contact /> },
 ];
 
-
-
-const modelSrc = './public/kevin-avatar.glb'; // this can be a relative or absolute URL
-
-
 function App() {
   return (
     <>
@@ -32,7 +25,6 @@ function App() {
       <div className="text-black bg-white dark:text-white dark:bg-black App scroll-smooth">
         <SectionLayout id="landing">
           <Landing />
-          <Avatar modelSrc={modelSrc} />
         </SectionLayout>
 
         {sections.map(({ id, element }: SectionProp) => {

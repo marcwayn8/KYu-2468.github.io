@@ -7,7 +7,7 @@ import { TypeAnimation } from "react-type-animation";
 import Calendly from "./Calendly";
 import LoadingTriangle from "./Loading/LoadingTriangle";
 import ButtonWrapper from "./Button/ButtonWrapper";
-const profileImg = "./img/profile-img-square.webp";
+const profileImg = "./img/profile-img-square.webp.jpg";
 const KevinAvatar = lazy(() => import("./KevinAvatar"));
 
 const Landing = () => {
@@ -36,7 +36,7 @@ const Landing = () => {
               sequence={[
                 "👋 Hey there!",
                 2000,
-                "👈 I'm Kevin",
+                "👈 I'm Wayne",
                 2000,
                 "I'm driven and enthusiastic 🧠",
                 1000,
@@ -61,16 +61,21 @@ const Landing = () => {
               text="Linkedin"
               textColor="text-white"
               buttonColor="bg-sky-600"
-              linkURL="https://www.linkedin.com/in/kevinyu2468/"
+              linkURL="https://www.linkedin.com/in/waynemarch/"
             />
 
             <ContactButton
               text="GitHub"
               textColor="text-white"
               buttonColor="bg-black dark:bg-neutral-800"
-              linkURL="https://github.com/KYu-2468"
+              linkURL="https://github.com/marcwayn8"
             />
-
+  <ContactButton
+              text="Portfolio"
+              textColor="text-red"
+              buttonColor="bg-black dark:bg-neutral-800"
+              linkURL="https://jamaicancoder.com"
+            />
             <Calendly />
           </div>
         </div>

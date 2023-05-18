@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { Avatar } from "@readyplayerme/visage";
 import { useMediaQuery } from "usehooks-ts";

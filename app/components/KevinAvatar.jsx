@@ -1,10 +1,12 @@
+"use client";
+
 import React from "react";
 import { Avatar } from "@readyplayerme/visage";
 import { useMediaQuery } from "usehooks-ts";
 import LoadingTriangle from "./Loading/LoadingTriangle";
 
-const modelSrc = "kevin-avatar.glb"; // this can be a relative or absolute URL
-const animationSrc = "kevin-avatar.glb";
+const modelSrc = "https://models.readyplayer.me/645ede804bc08cad5cd07f09.glb"; // this can be a relative or absolute URL
+const animationSrc = "https://models.readyplayer.me/645ede804bc08cad5cd07f09.glb";
 
 export default function KevinAvatar() {
   const isSmallScreen = useMediaQuery("(max-width: 768px)");

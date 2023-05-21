@@ -33,7 +33,7 @@ const Contact = () => {
           text="LeetCode"
           textColor="text-white"
           buttonColor="bg-red-600"
-          linkURL="https://leetcode.com/marcwayn8/"
+          linkURL="https://leetcode.com/marcwayn/"
         />
         <ContactButton
           text="Tiktok"

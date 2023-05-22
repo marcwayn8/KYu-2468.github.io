@@ -34,7 +34,7 @@ const Info = () => {
       <Title>Full-Stack Software Engineer</Title>
       <div className="flex flex-wrap">
         <Content>
-          Meet Wayne, a software engineer at Verisk Analystics with 2+ years in software engineering
+          Meet Wayne, a software engineer at Verisk Analytics with 2+ years in software engineering.
           A graduate from the Marcy Lab School Software Engineering Bootcamp, a 1-year alternative to college.Wayne currently ranks in the top 8.4% among 393,066 global
           contestants in LeetCode's Global Competitive programming competition.
           Wayne values collaboration, positivity, and a non-toxic work

@@ -49,8 +49,7 @@ const Info = () => {
           passionate about contributing to industries with a positive impact on
           people's well-being and could be a great addition to your team.
         </Content>
-
-        <div className="h-9">
+        {/* <div className="h-9">
       <TypeAnimation
         className="text-xl md:text-3xl"
         sequence={sequence.flat()}
@@ -58,7 +57,8 @@ const Info = () => {
         cursor={true}
         repeat={Infinity}
       />
-    </div>
+      
+         </div> */}
       </div>
     </div>
   );

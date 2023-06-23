@@ -2,6 +2,8 @@ import React from "react";
 import Content from "./Typography/Content";
 import SectionTitle from "./Typography/SectionTitle";
 import Title from "./Typography/Title";
+import { infos,quotes } from "../data/about";
+import { TypeAnimation } from "react-type-animation";
 
 const profileImg = "./img/profile-img-square.webp.jpg";
 const About = () => {
@@ -42,6 +44,27 @@ const Info = () => {
           passionate about contributing to industries with a positive impact on
           people's well-being and could be a great addition to your team.
         </Content>
+
+        <div className="h-9">
+            <TypeAnimation
+              className="text-xl md:text-3xl"
+              sequence={[
+                "👋 Hey there!",
+                2000,
+                "👈 I'm Wayne",
+                2000,
+                "I'm driven and enthusiastic 🧠",
+                1000,
+                "I'm a full stack engineer 📱",
+                2000,
+                "I'm fueled by curiosity and passion 🧐",
+                2000,
+              ]}
+              wrapper="span"
+              cursor={true}
+              repeat={Infinity}
+            />
+          </div>
       </div>
     </div>
   );

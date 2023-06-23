@@ -4,21 +4,26 @@ import React from "react";
 import { Avatar } from "@readyplayerme/visage";
 import { useMediaQuery } from "usehooks-ts";
 import LoadingTriangle from "./Loading/LoadingTriangle";
+import { TypeAnimation } from "react-type-animation";
 
 const modelSrc = "https://models.readyplayer.me/6495962b8c331a0f7672b37d.glb"; // this can be a relative or absolute URL
 const animationSrc = "https://models.readyplayer.me/6495962b8c331a0f7672b37d.glb";
+const poseSrc = "https://models.readyplayer.me/6495962b8c331a0f7672b37d.glb";
 
 export default function KevinAvatar() {
   const isSmallScreen = useMediaQuery("(max-width: 768px)");
 
   return (
+ 
     <Avatar
       ambientLightColor="#fff5b6"
       ambientLightIntensity={0.25}
       cameraInitialDistance={2.5}
       cameraTarget={1.55}
+    
       dirLightColor="#002aff"
       dirLightIntensity={5}
+
       emotion={{
         browInnerUp: 0.3,
         browOuterUpLeft: 0.37,
@@ -33,18 +38,20 @@ export default function KevinAvatar() {
       onLoaded={function noRefCheck(){}}
       onLoading={function noRefCheck(){}}
       modelSrc={modelSrc}
-      poseSrc=""
+      animationSrc={animationSrc}
+      poseSrc={poseSrc}
+    
       scale={1}
       spotLightAngle={0.314}
       spotLightColor="#fff5b6"
       spotLightIntensity={1}
-  
+
       style={{
-        background: 'transparent',
-   
-        height: isSmallScreen ? "160px" : "516px"
+        background: 'transparent'
       }}
-      loader={<LoadingTriangle />}
     />
+
   );
 }
+
+

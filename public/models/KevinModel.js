@@ -8,7 +8,7 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 export default function Model(props) {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF(
-    "https://models.readyplayer.me/6495962b8c331a0f7672b37d.glb"
+    "./645ede804bc08cad5cd07f09.glb"
   );
   // const { actions } = useAnimations(animations, group);
   return (
@@ -30,4 +30,4 @@ export default function Model(props) {
   );
 }
 
-useGLTF.preload("https://models.readyplayer.me/6495962b8c331a0f7672b37d.glb");
+useGLTF.preload("./645ede804bc08cad5cd07f09.glb");

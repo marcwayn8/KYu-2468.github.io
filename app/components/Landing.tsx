@@ -88,8 +88,7 @@ const Landing = () => {
        <TypeAnimation
          className="text-xl md:text-3xl"
          sequence={[
-          ...infos.map((info) => [`${info.key}: ${info.value} 🧠`, 2000]),
-          ...quotes.map((quote) => [quote + "🧐", 2000] )
+          ...infos.map((info) => `${info.key}: ${info.value} 🧠`, 2000), ...quotes.map((quote) => quote + "🧐", 2000)
         ]}
          wrapper="span"
          cursor={true}

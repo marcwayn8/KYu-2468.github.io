@@ -7,7 +7,7 @@ import LoadingTriangle from "./Loading/LoadingTriangle";
 
 
 const modelSrc = "https://models.readyplayer.me/6495962b8c331a0f7672b37d.glb"; // this can be a relative or absolute URL
-const animationSrc = "https://models.readyplayer.me/6495962b8c331a0f7672b37d.glb";
+
 
 
 export default function KevinAvatar() {

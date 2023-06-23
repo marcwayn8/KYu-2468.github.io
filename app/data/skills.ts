@@ -51,8 +51,8 @@ export const frontEnd: SkillProp[] = [
 
 export const backEnd: SkillProp[] = [
   { name: "Node", experience: PROFICIENT, icon: node },
-  // { name: "Express", experience: PROFICIENT, icon: express },
-  // { name: "Express", experience: PROFICIENT, icon: expressWhite },
+  { name: "Express", experience: PROFICIENT, icon: express },
+  { name: "Express", experience: PROFICIENT, icon: expressWhite },
   { name: "PostgreSQL", experience: COMPETENT, icon: postgresql },
   { name: "Firebase", experience: COMPETENT, icon: firebase },
   // { name: "REST API", experience: COMPETENT, icon: restfulApi },
@@ -60,7 +60,7 @@ export const backEnd: SkillProp[] = [
 ];
 
 export const additional: SkillProp[] = [
-  // { name: "Algorithm & Data Structure", experience: EXPERT, icon: algo },
+  { name: "Algorithm & Data Structure", experience: EXPERT, icon: algo },
   { name: "VS Code", experience: PROFICIENT, icon: vsCode },
   { name: "Git", experience: COMPETENT, icon: git },
   { name: "GitHub", experience: COMPETENT, icon: github },

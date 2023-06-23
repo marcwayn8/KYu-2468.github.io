@@ -9,6 +9,7 @@ import LoadingTriangle from "./Loading/LoadingTriangle";
 import ButtonWrapper from "./Button/ButtonWrapper";
 const profileImg = "./img/profile-img.jpg";
 const KevinAvatar = lazy(() => import("./KevinAvatar"));
+import { infos,quotes } from "../data/about";
 
 const Landing = () => {
   const [is3DModelActivated, setIs3DModelActivated] = useState(false);
@@ -17,6 +18,10 @@ const Landing = () => {
     setIs3DModelActivated(!is3DModelActivated);
   }
 
+  const sequence = [
+    ...infos.map((info) => [`${info.key}: ${info.value} 🧠`, 2000]),
+    ...quotes.map((quote) => [quote + "🧐", 2000] ),
+  ];
   return (
     <>
       <div className="flex flex-col items-center h-full pt-24 md:flex-row">
@@ -77,6 +82,17 @@ const Landing = () => {
               linkURL="https://jamaicancoder.com"
             />
             <Calendly />
+          </div>
+          <div className="flex flex-col items-center w-1/2 h-full px-2 pt-12 text-2xl">
+           <div className="h-9">
+       <TypeAnimation
+         className="text-xl md:text-3xl"
+         sequence={sequence.flat()}
+         wrapper="span"
+         cursor={true}
+         repeat={Infinity}
+       />
+ </div>
           </div>
         </div>
       </div>

@@ -2,15 +2,12 @@ import React from "react";
 import Content from "./Typography/Content";
 import SectionTitle from "./Typography/SectionTitle";
 import Title from "./Typography/Title";
-import { infos,quotes } from "../data/about";
+
 import { TypeAnimation } from "react-type-animation";
 
 const profileImg = "./img/profile-img-square.webp.jpg";
 
-const sequence = [
-  ...infos.map((info) => [`${info.key}: ${info.value} 🧠`, 2000]),
-  ...quotes.map((quote) => [quote + "🧐", 2000] ),
-];
+
 const About = () => {
   return (
     <>
@@ -52,17 +49,7 @@ const Info = () => {
  
       </div>
    
-           <div className="flex flex-col items-center w-1/2 h-full px-2 pt-12 text-2xl">
-           <div className="h-9">
-       <TypeAnimation
-         className="text-xl md:text-3xl"
-         sequence={sequence.flat()}
-         wrapper="span"
-         cursor={true}
-         repeat={Infinity}
-       />
- </div>
-          </div>
+       
           </div>
   );
 };

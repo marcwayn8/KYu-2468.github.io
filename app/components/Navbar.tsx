@@ -47,7 +47,7 @@ const Navbar = ({ sections }: SectionProps) => {
           <MoonBtn setIsDarkMode={setIsDarkMode} />
         )}
       </div>
-    </div>
+    </div> 
   );
 };
 

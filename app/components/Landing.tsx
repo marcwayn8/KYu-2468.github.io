@@ -20,7 +20,7 @@ const Landing = () => {
 
   const sequence = [
     ...infos.map((info) => [`${info.key}: ${info.value} 🧠`, 2000]),
-    ...quotes.map((quote) => [quote + "🧐", 2000] ),
+    ...quotes.map((quote) => [quote + "🧐", 2000] )
   ];
   return (
     <>

@@ -6,6 +6,11 @@ import { infos,quotes } from "../data/about";
 import { TypeAnimation } from "react-type-animation";
 
 const profileImg = "./img/profile-img-square.webp.jpg";
+
+const sequence = [
+  ...infos.map((info) => [`${info.key}: ${info.value} 🧠`, 2000]),
+  ...quotes.map((quote) => [quote + "🧐", 2000] ),
+];
 const About = () => {
   return (
     <>
@@ -46,25 +51,14 @@ const Info = () => {
         </Content>
 
         <div className="h-9">
-            <TypeAnimation
-              className="text-xl md:text-3xl"
-              sequence={[
-                "👋 Hey there!",
-                2000,
-                "👈 I'm Wayne",
-                2000,
-                "I'm driven and enthusiastic 🧠",
-                1000,
-                "I'm a full stack engineer 📱",
-                2000,
-                "I'm fueled by curiosity and passion 🧐",
-                2000,
-              ]}
-              wrapper="span"
-              cursor={true}
-              repeat={Infinity}
-            />
-          </div>
+      <TypeAnimation
+        className="text-xl md:text-3xl"
+        sequence={sequence.flat()}
+        wrapper="span"
+        cursor={true}
+        repeat={Infinity}
+      />
+    </div>
       </div>
     </div>
   );

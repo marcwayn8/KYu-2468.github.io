@@ -52,7 +52,7 @@ const Info = () => {
         <div >
       <TypeAnimation
         className="text-xl md:text-3xl"
-        sequence={sequence.flat()}
+        sequence={sequence}
         wrapper="span"
         cursor={true}
         repeat={Infinity}

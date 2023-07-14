@@ -75,12 +75,7 @@ const Landing = () => {
               buttonColor="bg-black dark:bg-neutral-800"
               linkURL="https://github.com/marcwayn8"
             />
-  <ContactButton
-              text="Portfolio"
-              textColor="text-red"
-              buttonColor="bg-black dark:bg-neutral-800"
-              linkURL="https://jamaicancoder.com"
-            />
+ 
             <Calendly />
           </div>
           <div className="flex flex-col items-center w-1/2 h-full px-2 pt-12 text-2xl">

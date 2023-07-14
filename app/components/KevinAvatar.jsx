@@ -5,10 +5,7 @@ import { Avatar } from "@readyplayerme/visage";
 import { useMediaQuery } from "usehooks-ts";
 import LoadingTriangle from "./Loading/LoadingTriangle";
 
-
 const modelSrc = "https://models.readyplayer.me/6495962b8c331a0f7672b37d.glb"; // this can be a relative or absolute URL
-
-
 
 export default function KevinAvatar() {
   const isSmallScreen = useMediaQuery("(max-width: 768px)");

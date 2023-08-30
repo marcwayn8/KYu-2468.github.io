@@ -9,7 +9,7 @@ export default function RootLayout({ children }: any) {
         <meta name="theme-color" content="#000000" />
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 
-        <title>Wayne March Portfolio</title>
+        <title>Kevin Yu Portfolio</title>
       </head>
       <body>{children}</body>
     </html>

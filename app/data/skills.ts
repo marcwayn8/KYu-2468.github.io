@@ -11,7 +11,6 @@ const node = "./icon/node.webp";
 const express = "./icon/express.webp";
 const expressWhite = "./icon/express-white.webp";
 const postgresql = "./icon/postgresql.webp";
-const python ="./icon/python.webp";
 // const restfulApi = "./icon/restful-api.webp";
 const graphQL = "./icon/graphql.webp";
 
@@ -28,11 +27,11 @@ export interface SkillProp {
   icon: any;
 }
 
-const EXPERT = "Expert";
+// const EXPERT = "Expert";
 const PROFICIENT = "Proficient";
 const COMPETENT = "Competent";
 const ADVANCED_BEGINNER = "Advanced Beginner";
-const BEGINNER = "Beginner";
+// const BEGINNER = "Beginner";
 
 export const language: SkillProp[] = [
   { name: "JavaScript", experience: PROFICIENT, icon: javascript },
@@ -52,8 +51,8 @@ export const frontEnd: SkillProp[] = [
 
 export const backEnd: SkillProp[] = [
   { name: "Node", experience: PROFICIENT, icon: node },
-  { name: "Express", experience: PROFICIENT, icon: express },
-  { name: "Express", experience: PROFICIENT, icon: expressWhite },
+  // { name: "Express", experience: PROFICIENT, icon: express },
+  // { name: "Express", experience: PROFICIENT, icon: expressWhite },
   { name: "PostgreSQL", experience: COMPETENT, icon: postgresql },
   { name: "Firebase", experience: COMPETENT, icon: firebase },
   // { name: "REST API", experience: COMPETENT, icon: restfulApi },
@@ -61,7 +60,7 @@ export const backEnd: SkillProp[] = [
 ];
 
 export const additional: SkillProp[] = [
-  { name: "Algorithm & Data Structure", experience: EXPERT, icon: python},
+  // { name: "Algorithm & Data Structure", experience: EXPERT, icon: algo },
   { name: "VS Code", experience: PROFICIENT, icon: vsCode },
   { name: "Git", experience: COMPETENT, icon: git },
   { name: "GitHub", experience: COMPETENT, icon: github },

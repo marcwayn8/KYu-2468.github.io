@@ -75,6 +75,19 @@ const Landing = () => {
               buttonColor="bg-black dark:bg-neutral-800"
               linkURL="https://github.com/marcwayn8"
             />
+
+<ContactButton
+              text="Medium"
+              textColor="text-white"
+              buttonColor="bg-gray dark:bg-neutral-800"
+              linkURL="https://medium.com/@juniormarch48"
+            />
+    <ContactButton
+              text="Spotify"
+              textColor="text-white"
+              buttonColor="bg-black dark:bg-neutral-800"
+              linkURL="https://open.spotify.com/show/2SGKYo1m3F74IDzeFb7sh3?si=112d2be093c34efb"
+            />
  
             <Calendly />
           </div>

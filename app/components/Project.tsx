@@ -57,12 +57,12 @@ const Info = ({ description, github, website }: InfoProp) => {
           textColor="text-white"
           linkURL={github}
         />
-        <ProjectButtonn
+        {/* <ProjectButtonn
           buttonColor="bg-blue-700"
           text="🚀 See live"
           textColor="text-white"
           linkURL={website}
-        />
+        /> */}
       </div>
     </div>
   );

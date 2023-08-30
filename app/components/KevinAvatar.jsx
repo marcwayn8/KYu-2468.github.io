@@ -5,57 +5,47 @@ import { Avatar } from "@readyplayerme/visage";
 import { useMediaQuery } from "usehooks-ts";
 import LoadingTriangle from "./Loading/LoadingTriangle";
 
-const modelSrc = "kevin-avatar.glb"; // this can be a relative or absolute URL
-const animationSrc = "/male-idle.glb";
+const modelSrc = "https://models.readyplayer.me/64c821ad7345960bf87dd1b0.glb"; // this can be a relative or absolute URL
 
 export default function KevinAvatar() {
   const isSmallScreen = useMediaQuery("(max-width: 768px)");
 
   return (
+   
     <Avatar
       ambientLightColor="#fff5b6"
       ambientLightIntensity={0.25}
-      animationSrc={animationSrc}
       cameraInitialDistance={2.5}
-      cameraTarget={1.6}
-      cameraZoomTarget={[
-        {
-          x: 0,
-          y: 0.5,
-          z: 0.48,
-        },
-      ]}
+      cameraTarget={1.55}
       dirLightColor="#002aff"
       dirLightIntensity={5}
-      dirLightPosition={{
-        x: -3,
-        y: 5,
-        z: -5,
-        "_constructor-name_": "Vector3",
+      emotion={{
+        browInnerUp: 0.3,
+        browOuterUpLeft: 0.37,
+        browOuterUpRight: 0.49,
+        eyeSquintLeft: 0.4,
+        eyeSquintRight: 0.2,
+        mouthShrugUpper: 0.27,
+        mouthSmileLeft: 0.37,
+        mouthSmileRight: 0.36
       }}
       environment="city"
-      headMovement
-      idleRotation
+      onLoaded={function noRefCheck(){}}
+      onLoading={function noRefCheck(){}}
       modelSrc={modelSrc}
-      onLoaded={function noRefCheck() {}}
-      onLoading={function noRefCheck() {}}
-      scale={1.1}
-      shadows
+      scale={1}
       spotLightAngle={0.314}
       spotLightColor="#fff5b6"
       spotLightIntensity={1}
-      spotLightPosition={[
-        {
-          x: 12,
-          y: 10,
-          z: 7.5,
-        },
-      ]}
+    
       style={{
-        background: "transparent",
-        height: isSmallScreen ? "160px" : "516px",
+        background: 'transparent'
+   ,
+        height: isSmallScreen ? "160px" : "516px"
       }}
       loader={<LoadingTriangle />}
     />
   );
 }
+
+

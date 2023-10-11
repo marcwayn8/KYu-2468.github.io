@@ -1,9 +1,9 @@
 "use client";
 
-import React from "react";
+import {React} from "react";
 import { Avatar } from "@readyplayerme/visage";
 import { useMediaQuery } from "usehooks-ts";
-import LoadingTriangle from "./Loading/LoadingTriangle";
+import {LoadingTriangle} from "./Loading/LoadingTriangle";
 
 const modelSrc = "https://models.readyplayer.me/6526e7242537ec63d9a0b0d6.glb"; // this can be a relative or absolute URL
 const animationSrc = "https://models.readyplayer.me/6526e7242537ec63d9a0b0d6.glb";

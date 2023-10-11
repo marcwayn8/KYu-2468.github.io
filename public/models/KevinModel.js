@@ -10,7 +10,7 @@ export default function Model(props) {
   const { nodes, materials, animations } = useGLTF(
     "/645ede804bc08cad5cd07f09.glb"
   );
-  // const { actions } = useAnimations(animations, group);
+
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">

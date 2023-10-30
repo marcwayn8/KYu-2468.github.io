@@ -10,9 +10,9 @@ import ButtonWrapper from "./Button/ButtonWrapper";
 const profileImg = "./img/profile-img.jpg";
 const KevinAvatar = lazy(() => import("./KevinAvatar"));
 import { infos,quotes } from "../data/about";
+import { profile } from "console";
 const image1 = "./img/1.jpg";
 const image2 = "./img/2.jpg";
-const image3 = "./img/3.jpg";
 const image4 = "./img/4.webp";
 const image5 = "./img/5.jpg";
 
@@ -121,7 +121,7 @@ const Landing = () => {
 };
 
 const Image = () => {
-  const images = [image1,image2,image3,image4,image5]; // Define your image sources
+  const images = [image1,image2,profileImg,image4,image5]; // Define your image sources
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {

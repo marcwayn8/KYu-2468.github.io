@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, lazy, Suspense } from "react";
+import React, { useState, lazy, Suspense,useEffect } from "react";
 import ContactButton from "./Button/ContactButton";
 import "./Landing.css";
 import { TypeAnimation } from "react-type-animation";
@@ -10,6 +10,12 @@ import ButtonWrapper from "./Button/ButtonWrapper";
 const profileImg = "./img/profile-img.jpg";
 const KevinAvatar = lazy(() => import("./KevinAvatar"));
 import { infos,quotes } from "../data/about";
+const image1 = "./img/1.jpg";
+const image2 = "./img/2.jpg";
+const image3 = "./img/3.jpg";
+const image4 = "./img/4.webp";
+const image5 = "./img/5.jpg";
+
 
 const Landing = () => {
   const [is3DModelActivated, setIs3DModelActivated] = useState(false);
@@ -106,16 +112,37 @@ const Landing = () => {
           </div>
         </div>
       </div>
+      <br>
+      </br>
+      <br>
+      </br>
     </>
   );
 };
 
 const Image = () => {
+  const images = [image1,image2,image3,image4,image5]; // Define your image sources
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Update the current image index to display the next image
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000); // Change image every 3 seconds (adjust this value as needed)
+
+    return () => {
+      // Clear the interval when the component unmounts to avoid memory leaks
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
     <div className="flex items-center justify-center h-40 md:h-60 xl:h-3/4 md:ml-8">
       <img
         className="h-40 rounded-full shadow-2xl shadow-black xl:h-96 md:h-72 dark:shadow-white"
-        src={profileImg}
+        src={images[currentImageIndex]}
         alt="profile"
       />
     </div>

@@ -36,12 +36,6 @@ const Contact = () => {
           linkURL="https://leetcode.com/marcwayn/"
         />
         <ContactButton
-          text="Tiktok"
-          textColor="text-black"
-          buttonColor="bg-white-600"
-          linkURL="https://www.tiktok.com/@juniormarch?_t=8cLqtruxPnX&_r=1"
-        />
-        <ContactButton
           text="Shopify"
           textColor="text-white"
           buttonColor="bg-green-600"

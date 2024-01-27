@@ -10,9 +10,6 @@ import ButtonWrapper from "./Button/ButtonWrapper";
 const profileImg = "./img/profile-img.jpg";
 const KevinAvatar = lazy(() => import("./KevinAvatar"));
 import { infos,quotes } from "../data/about";
-import { profile } from "console";
-const image1 = "./img/1.jpg";
-const image4 = "./img/4.webp";
 const image5 = "./img/5.jpg";
 
 
@@ -80,13 +77,6 @@ const Landing = () => {
               buttonColor="bg-black dark:bg-neutral-800"
               linkURL="https://github.com/marcwayn8"
             />
-
-<ContactButton
-              text="Medium"
-              textColor="text-white"
-              buttonColor="bg-gray dark:bg-neutral-800"
-              linkURL="https://medium.com/@juniormarch48"
-            />
     <ContactButton
               text="Spotify"
               textColor="text-blue"
@@ -120,7 +110,7 @@ const Landing = () => {
 };
 
 const Image = () => {
-  const images = [image1,profileImg,image4,image5]; // Define your image sources
+  const images = [profileImg,image5]; // Define your image sources
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {

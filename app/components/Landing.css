@@ -36,12 +36,44 @@ body {
   background-color: yellow;
   color: black;
   border: 2px solid green;
-  padding: 10px 20px;
+  padding: 4px 8px;
   font-weight: bold;
   cursor: pointer;
+  width: 150px;
   transition: transform 0.3s ease;
 }
 
 .recipe-button:hover {
   transform: translateY(-5px);
+}
+.dropdown-toggle {
+  background-color: yellow; /* Yellow background */
+  color: green; /* Green text */
+  border: 2px solid black; /* Optional: add a black border */
+  cursor: pointer;
+  padding: 10px;
+  font-size: 16px;
+  transition: 0.3s; /* Smooth transition for hover effects */
+}
+
+.dropdown-toggle:hover {
+  background-color: #f8e825; /* A slightly darker yellow for hover */
+  /* Optionally, you can change the text color on hover too */
+}
+
+.dropdown-toggle:focus {
+  outline: none; /* Removes the outline to keep the style clean */
+}
+
+.recipe-item {
+  /* Style for individual recipe items in the dropdown */
+  display: block; /* Ensures each button takes up its own line */
+  width: 100%; /* Match the width to parent */
+  /* Other styling as needed */
+}
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column; /* Aligns children vertically */
+  /* Other styling as needed */
 }

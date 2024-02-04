@@ -29,13 +29,16 @@ const Landing = () => {
     const pdfMap: { [key: string]: any } = {
       'ackeeAndSaltfish': ackeeAndSaltfishPdf,
       'ovenFriedChicken': ovenfriedChickenpdf,
-      // other recipes can be added here
+     
     };
     window.open(pdfMap[pdfName], '_blank');
   };
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
-
-
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+  
   const [isRecipeModalOpen, setIsRecipeModalOpen] = useState(false);
 
   const toggleRecipeModal = () => {
@@ -110,8 +113,12 @@ const Landing = () => {
               buttonColor="bg-black dark:bg-neutral-800"
               linkURL="https://medium.com/@juniormarch48"
             />
- 
+    
             <Calendly />
+           <ButtonWrapper> <button onClick={toggleRecipeModal} className="recipe-button" >
+                Favorite Recipes
+               </button></ButtonWrapper> 
+          
           </div>
           <div className="flex flex-col items-center w-1/2 h-full px-2 pt-12 text-2xl">
            <div className="h-9">
@@ -132,19 +139,25 @@ const Landing = () => {
       </br>
       <br>
       </br>
-      <button onClick={toggleRecipeModal} className="recipe-button">
-        My Favorite Recipes
-      </button>
+     
       {isRecipeModalOpen && (
-      <RecipeModal title="Jamaicancoder's Favorite Recipes"  closeModal={toggleRecipeModal}>
-        <select onChange={(e) => openPdf(e.target.value)}>
-          <option value="ackeeAndSaltfish">Ackee and Saltfish</option>
-          <option value="ovenFriedChicken">Oven Fried Jerk Chicken</option>
-          {/* ...more options */}
-        </select>
-        {/* ... rest of your modal content */}
-      </RecipeModal>
-    )}
+  <RecipeModal title="Jamaicancoder's Favorite Recipes" closeModal={toggleRecipeModal}>
+    <div>
+      <button className="dropdown-toggle" onClick={toggleDropdown}>
+        {dropdownOpen ? '▲' : '▼'} Jamaicancoder's Favorite Recipes
+      </button>
+      {dropdownOpen && (
+        <div className="dropdown-content">
+            <button onClick={() => openPdf('ackeeAndSaltfish')} className="recipe-item">Ackee and Saltfish</button>
+            <br>
+            </br>
+        <button onClick={() => openPdf('ovenFriedChicken')} className="recipe-item">Oven Fried Chicken</button>
+          {/* ...more buttons for other recipes */}
+        </div>
+      )}
+    </div>
+  </RecipeModal>
+)}
     </>
   );
 };

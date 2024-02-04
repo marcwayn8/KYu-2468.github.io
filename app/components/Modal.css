@@ -22,7 +22,7 @@
   .modal-close-button {
     float: right;
     border: none;
-    background: none;
+    background: black;
     font-size: 1.5rem;
     cursor: pointer;
   }

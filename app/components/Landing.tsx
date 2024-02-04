@@ -11,6 +11,9 @@ const profileImg = "./img/profile-img.jpg";
 const KevinAvatar = lazy(() => import("./KevinAvatar"));
 import { infos,quotes } from "../data/about";
 const image5 = "./img/5.jpg";
+import RecipeModal from './Modal';
+import ackeeAndSaltfishPdf from '../data/recipes/ackee_saltfish.pdf';
+import ovenfriedChickenpdf from '../data/recipes/oven_fried.pdf';
 
 
 const Landing = () => {
@@ -20,6 +23,23 @@ const Landing = () => {
     setIs3DModelActivated(!is3DModelActivated);
   }
 
+
+  const openPdf = (pdfName: string) => {
+    const pdfMap: { [key: string]: any } = {
+      'ackeeAndSaltfish': ackeeAndSaltfishPdf,
+      'ovenFriedChicken': ovenfriedChickenpdf,
+      // other recipes can be added here
+    };
+    window.open(pdfMap[pdfName], '_blank');
+  };
+
+
+
+  const [isRecipeModalOpen, setIsRecipeModalOpen] = useState(false);
+
+  const toggleRecipeModal = () => {
+    setIsRecipeModalOpen(!isRecipeModalOpen);
+  };
   const sequence = [
     ...infos.map((info) => [`${info.key}: ${info.value} 🧠`, 2000]),
     ...quotes.map((quote) => [quote + "🧐", 2000] )
@@ -83,6 +103,12 @@ const Landing = () => {
               buttonColor="bg-black dark:bg-neutral-800"
               linkURL="https://open.spotify.com/show/2SGKYo1m3F74IDzeFb7sh3?si=112d2be093c34efb"
             />
+            <ContactButton
+              text="Medium"
+              textColor="text-blue"
+              buttonColor="bg-black dark:bg-neutral-800"
+              linkURL="https://medium.com/@juniormarch48"
+            />
  
             <Calendly />
           </div>
@@ -105,6 +131,19 @@ const Landing = () => {
       </br>
       <br>
       </br>
+      <button onClick={toggleRecipeModal} className="recipe-button">
+        My Favorite Recipes
+      </button>
+      {isRecipeModalOpen && (
+      <RecipeModal closeModal={toggleRecipeModal}>
+        <select onChange={(e) => openPdf(e.target.value)}>
+          <option value="ackeeAndSaltfish">Ackee and Saltfish</option>
+          <option value="ovenFriedChicken">Oven Fried Jerk Chicken</option>
+          {/* ...more options */}
+        </select>
+        {/* ... rest of your modal content */}
+      </RecipeModal>
+    )}
     </>
   );
 };

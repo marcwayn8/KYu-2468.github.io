@@ -1,0 +1,41 @@
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+    max-width: 500px;
+    z-index: 11;
+  }
+  
+  .modal-close-button {
+    float: right;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .recipe-button {
+    /* Add your button styles and animations */
+    cursor: pointer;
+    /* Example hover effect */
+    transition: transform 0.2s;
+  }
+  
+  .recipe-button:hover {
+    transform: scale(1.1);
+  }
+  
+  

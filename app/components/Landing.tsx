@@ -144,7 +144,7 @@ const Landing = () => {
   <RecipeModal title="Jamaicancoder's Favorite Recipes" closeModal={toggleRecipeModal}>
     <div>
       <button className="dropdown-toggle" onClick={toggleDropdown}>
-        {dropdownOpen ? '▲' : '▼'} Jamaicancoder's Favorite Recipes
+        {dropdownOpen ? '▲' : '▼'} Recipes
       </button>
       {dropdownOpen && (
         <div className="dropdown-content">

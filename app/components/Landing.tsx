@@ -13,7 +13,8 @@ import { infos,quotes } from "../data/about";
 const image5 = "./img/5.jpg";
 import RecipeModal from './Modal';
 import ackeeAndSaltfishPdf from '../data/recipes/ackee_saltfish.pdf';
-import ovenfriedChickenpdf from '../data/recipes/oven_fried.pdf';
+import ovenfriedChickenpdf from '../data/recipes/over_fried.pdf';
+
 
 
 const Landing = () => {
@@ -135,7 +136,7 @@ const Landing = () => {
         My Favorite Recipes
       </button>
       {isRecipeModalOpen && (
-      <RecipeModal closeModal={toggleRecipeModal}>
+      <RecipeModal title="Jamaicancoder's Favorite Recipes"  closeModal={toggleRecipeModal}>
         <select onChange={(e) => openPdf(e.target.value)}>
           <option value="ackeeAndSaltfish">Ackee and Saltfish</option>
           <option value="ovenFriedChicken">Oven Fried Jerk Chicken</option>

@@ -2,11 +2,23 @@
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
-  // output: "export",
-  // Optional: Add a trailing slash to all paths `/about` -> `/about/`
-  // trailingSlash: true,
-  // Optional: Change the output directory `out` -> `dist`
-  // distDir: 'dist',
+  webpack(config, options) {
+    config.module.rules.push({
+      test: /\.pdf$/,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            publicPath: '/_next/static/files',
+            outputPath: 'static/files',
+            name: '[name].[ext]',
+          },
+        },
+      ],
+    });
+
+    return config;
+  },
 };
 
 module.exports = nextConfig;

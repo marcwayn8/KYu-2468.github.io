@@ -32,3 +32,16 @@ body {
 #filter {
   position: absolute;
 }
+.recipe-button {
+  background-color: yellow;
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.recipe-button:hover {
+  transform: translateY(-5px);
+}

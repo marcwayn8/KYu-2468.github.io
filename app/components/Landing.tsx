@@ -157,7 +157,7 @@ const Landing = () => {
       )}
       {currentPdf && (
   <div className="pdf-viewer">
-    <iframe src={currentPdf} width="100%" height="500px" style={{ border: "none" }} title="PDF Viewer"></iframe>
+    <iframe src={currentPdf} max-width="100%" height="500px" style={{ border: "none" }} title="PDF Viewer"></iframe>
     <button onClick={() => setCurrentPdf(null)} className="pdf-close-button">Close PDF</button>
   </div>
 )}

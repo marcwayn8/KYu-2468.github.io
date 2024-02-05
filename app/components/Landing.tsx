@@ -24,7 +24,7 @@ const Landing = () => {
     setIs3DModelActivated(!is3DModelActivated);
   }
 
-  const [currentPdf, setCurrentPdf] = useState(null);
+  const [currentPdf, setCurrentPdf] = useState<string | null>(null);
 
   const openPdf = (pdfName: string) => {
     const pdfMap: { [key: string]: any } = {
@@ -151,13 +151,13 @@ const Landing = () => {
       </button>
       {dropdownOpen && (
         <div className="dropdown-content">
-          <button onClick={() => openPdf('ackeeAndSaltfish')} className="recipe-item">Ackee and Saltfish</button>
-          <button onClick={() => openPdf('ovenFriedChicken')} className="recipe-item">Oven Fried Chicken</button>
+        <button onClick={() => {setCurrentPdf(ackeeAndSaltfishPdf)}} className="recipe-item">Ackee and Saltfish</button>
+          <button onClick={() => {setCurrentPdf(ovenfriedChickenpdf)}} className="recipe-item">Oven Fried Chicken</button>
         </div>
       )}
       {currentPdf && (
   <div className="pdf-viewer">
-    <iframe src={currentPdf} max-width="100%" height="500px" style={{ border: "none" }} title="PDF Viewer"></iframe>
+    <iframe src={currentPdf} width="100%" height="500px" style={{ border: "none" }} title="PDF Viewer"></iframe>
     <button onClick={() => setCurrentPdf(null)} className="pdf-close-button">Close PDF</button>
   </div>
 )}

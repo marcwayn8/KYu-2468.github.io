@@ -49,9 +49,9 @@
     }
   }
   /* Optional: if you want to hide the text of the Navbar buttons on small screens */
-  @media (max-width: 640px) {
+  /* @media (max-width: 640px) {
     .navbar-btn span {
       display: none;
     }
   }
-  
+   */

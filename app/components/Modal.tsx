@@ -14,7 +14,7 @@ const Modal: React.FC<ModalProps> = ({ title, children, closeModal }) => {
   const handleContentClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     e.stopPropagation(); // Prevents click event from propagating to parent elements
   };
-  const handleCloseClick = (e) => {
+  const handleCloseClick = (e:any) => {
     if (modalRef.current && !modalRef.current.contains(e.target)) {
       closeModal();
     }

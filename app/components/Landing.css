@@ -43,8 +43,22 @@ body {
   padding: 4px 8px;
   font-weight: bold;
   cursor: pointer;
-  height: max-content;
-  transition: transform 0.3s ease;
+
+  transition: all 0.3s ease; /* Smooth transition for size changes */
+}
+@media (max-width: 768px) {
+  .recipe-button {
+    padding: 0.8rem; /* Smaller padding */
+    font-size: 0.9rem; /* Smaller font size */
+  }
+}
+
+/* Further reduce padding and font size on even smaller screens */
+@media (max-width: 480px) {
+  .recipe-button {
+    padding: 0.6rem; /* Even smaller padding */
+    font-size: 0.8rem; /* Even smaller font size */
+  }
 }
 
 .recipe-button:hover {

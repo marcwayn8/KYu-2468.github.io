@@ -34,12 +34,16 @@ body {
 }
 .recipe-button {
   background-color: yellow;
+  display: flex;
+  flex-grow: 1; /* Grow to fill the space */
+  width: 100%;
+  box-sizing: border-box;
   color: black;
   border: 2px solid green;
   padding: 4px 8px;
   font-weight: bold;
   cursor: pointer;
-  width: 150px;
+  height: max-content;
   transition: transform 0.3s ease;
 }
 

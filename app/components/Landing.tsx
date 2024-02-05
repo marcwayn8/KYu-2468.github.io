@@ -24,15 +24,18 @@ const Landing = () => {
     setIs3DModelActivated(!is3DModelActivated);
   }
 
+  const [currentPdf, setCurrentPdf] = useState(null);
 
   const openPdf = (pdfName: string) => {
     const pdfMap: { [key: string]: any } = {
       'ackeeAndSaltfish': ackeeAndSaltfishPdf,
       'ovenFriedChicken': ovenfriedChickenpdf,
-     
+    
     };
-    window.open(pdfMap[pdfName], '_blank');
-  };
+   
+  setCurrentPdf(pdfMap[pdfName]);
+};
+  
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -141,20 +144,23 @@ const Landing = () => {
       </br>
      
       {isRecipeModalOpen && (
-  <RecipeModal title="Jamaicancoder's Favorite Recipes" closeModal={toggleRecipeModal}>
+  <RecipeModal title="Jamaicancoder's Favorite Recipes" closeModal={() => { setIsRecipeModalOpen(false); setCurrentPdf(null); }}>
     <div>
       <button className="dropdown-toggle" onClick={toggleDropdown}>
         {dropdownOpen ? '▲' : '▼'} Recipes
       </button>
       {dropdownOpen && (
         <div className="dropdown-content">
-            <button onClick={() => openPdf('ackeeAndSaltfish')} className="recipe-item">Ackee and Saltfish</button>
-            <br>
-            </br>
-        <button onClick={() => openPdf('ovenFriedChicken')} className="recipe-item">Oven Fried Chicken</button>
-          {/* ...more buttons for other recipes */}
+          <button onClick={() => openPdf('ackeeAndSaltfish')} className="recipe-item">Ackee and Saltfish</button>
+          <button onClick={() => openPdf('ovenFriedChicken')} className="recipe-item">Oven Fried Chicken</button>
         </div>
       )}
+      {currentPdf && (
+  <div className="pdf-viewer">
+    <iframe src={currentPdf} width="100%" height="500px" style={{ border: "none" }} title="PDF Viewer"></iframe>
+    <button onClick={() => setCurrentPdf(null)} className="pdf-close-button">Close PDF</button>
+  </div>
+)}
     </div>
   </RecipeModal>
 )}

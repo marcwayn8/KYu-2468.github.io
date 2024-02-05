@@ -34,15 +34,17 @@ const Navbar = ({ sections }: SectionProps) => {
   }, [isDarkMode]);
 
   return (
-    <div className="fixed z-10 flex items-center justify-between w-screen h-16 text-white bg-black dark:bg-neutral-800">
-      <div className="hidden ml-12 text-xl md:text-3xl grow md:block">
+    <div className="fixed z-10 flex items-center justify-between w-screen h-16 text-white bg-black dark:bg-neutral-800 px-4 md:px-12 navbar">
+      {/* Hide the non-social elements on small screens */}
+      <div className="navbar-logo hidden sm:flex ml-12 text-xl md:text-3xl grow">
         <a href="#landing">
           <span>Wayne March</span>
         </a>
       </div>
 
-       {/* Social icons container */}
-       <div className="flex justify-center items-center grow">
+      {/* Social icons container - always visible, but with responsive adjustments */}
+      <div className="social-icons flex justify-center items-center grow sm:justify-center md:justify-end">
+        {/* Social icons */}
         <a href="https://jamaicancoder.myshopify.com/" className="mx-2">
           <FontAwesomeIcon icon={faShopify} size="lg" />
         </a>
@@ -56,10 +58,10 @@ const Navbar = ({ sections }: SectionProps) => {
           <FontAwesomeIcon icon={faYoutube} size="lg" />
         </a>
       </div>
-      <div className="flex text-lg grow flex-nowrap md:text-2xl justify-evenly">
-        {sections.map((sectionProp: SectionProp) => {
-          return <NavbarBtn key={sectionProp.id} {...sectionProp} />;
-        })}
+      <div className="navbar-sections hidden sm:flex text-lg grow flex-nowrap md:text-2xl justify-evenly">
+        {sections.map((sectionProp: SectionProp) => (
+          <NavbarBtn key={sectionProp.id} {...sectionProp} />
+        ))}
         {isDarkMode ? (
           <SunBtn setIsDarkMode={setIsDarkMode} />
         ) : (

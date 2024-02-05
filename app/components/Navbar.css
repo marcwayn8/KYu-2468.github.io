@@ -1,0 +1,57 @@
+/* navbar.css */
+
+/* This will apply to all screen sizes */
+.social-icon {
+    font-size: 1.5rem; /* Adjust the size as needed */
+    padding: 0.5rem; /* Adjust the padding as needed */
+    margin: 0 0.25rem; /* Adjust the margin as needed */
+  }
+  
+  /* Hide everything except social icons on small screens */
+  @media (max-width: 640px) {
+    /* Assuming .navbar-logo is the class for the "Wayne March" text */
+    .navbar-logo,
+    /* Assuming .navbar-sections is the class for the section navigation */
+    .navbar-sections
+    /* Adjust if you have specific classes for the sun/moon buttons */
+     {
+      display: none; /* Hide these elements on small screens */
+    }
+  
+    /* Since we do not have a .social-icons class in the component, we target the parent div directly */
+    .flex.justify-center.items-center.grow {
+      justify-content: center; /* Center social icons */
+      width: 100%; /* Take the full width available */
+      margin: 0; /* Remove any margin if necessary */
+    }
+    
+    /* Ensure that the icons container takes the full width and centers the icons on small screens */
+    .flex.justify-center.items-center.grow.sm\:justify-end {
+      flex-grow: 1;
+      justify-content: space-between; /* Distribute icons evenly */
+    }
+  }
+  @media (max-width: 640px) {
+    .navbar-logo,
+    .navbar-sections {
+      display: none;
+    }
+  }
+  
+  /* Ensure social icons are centered on small screens and align to the end on larger screens */
+  .social-icons {
+    justify-content: center; /* Center icons on small screens */
+  }
+  
+  @media (min-width: 641px) {
+    .social-icons {
+      justify-content: flex-end; /* Align icons to the end on larger screens */
+    }
+  }
+  /* Optional: if you want to hide the text of the Navbar buttons on small screens */
+  @media (max-width: 640px) {
+    .navbar-btn span {
+      display: none;
+    }
+  }
+  

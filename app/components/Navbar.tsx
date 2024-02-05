@@ -1,6 +1,9 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShopify,faYoutube, faInstagram, faTiktok, faFacebookF } from '@fortawesome/free-brands-svg-icons';
+
 
 type SectionProps = {
   sections: SectionProp[];
@@ -35,6 +38,22 @@ const Navbar = ({ sections }: SectionProps) => {
       <div className="hidden ml-12 text-xl md:text-3xl grow md:block">
         <a href="#landing">
           <span>Wayne March</span>
+        </a>
+      </div>
+
+       {/* Social icons container */}
+       <div className="flex justify-center items-center grow">
+        <a href="https://jamaicancoder.myshopify.com/" className="mx-2">
+          <FontAwesomeIcon icon={faShopify} size="lg" />
+        </a>
+        <a href="https://www.instagram.com/way_ein?igsh=anFoZHNjenNjeDZo" className="mx-2">
+          <FontAwesomeIcon icon={faInstagram} size="lg" />
+        </a>
+        <a href="https://www.tiktok.com/@juniormarch" className="mx-2">
+          <FontAwesomeIcon icon={faTiktok} size="lg" />
+        </a>
+        <a href="https://youtube.com/@jamaicancoder6278?si=BkN8poPlOYqcvifQ" className="mx-2">
+          <FontAwesomeIcon icon={faYoutube} size="lg" />
         </a>
       </div>
       <div className="flex text-lg grow flex-nowrap md:text-2xl justify-evenly">

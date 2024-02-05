@@ -51,7 +51,7 @@ const Contact = () => {
           text="TikTok"
           textColor="text-white"
           buttonColor="bg-green-600"
-          linkURL="https://youtube.com/@jamaicancoder6278?si=BkN8poPlOYqcvifQ"
+          linkURL="tiktok.com/@juniormarch"
         />
       </div>
     </>

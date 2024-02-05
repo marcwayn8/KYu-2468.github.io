@@ -6,7 +6,7 @@
   </a>
 </p>
 
-🚀 [See it live](https://kevin-yu.vercel.app/)
+🚀 [See it live](https://jamaicancoder.vercel.app)
 
 ## 📦 Built from scratch With
 

@@ -14,7 +14,12 @@ const image5 = "./img/5.jpg";
 import RecipeModal from './Modal';
 import ackeeAndSaltfishPdf from '../data/recipes/ackee_saltfish.pdf';
 import ovenfriedChickenpdf from '../data/recipes/over_fried.pdf';
+import { Document, Page } from 'react-pdf';
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 
+// Set up PDF.js worker
+import  pdfjs from 'pdfjs-dist';
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 
 const Landing = () => {
@@ -35,7 +40,27 @@ const Landing = () => {
    
   setCurrentPdf(pdfMap[pdfName]);
 };
-  
+
+const [numPages, setNumPages] = useState<number | null>(null);
+
+const onDocumentLoadSuccess = (pdf: { numPages: number }) => {
+  setNumPages(pdf.numPages);
+};;
+
+const PdfViewer = ({ pdf }: { pdf: string }) => {
+  return (
+    <Document
+      file={pdf}
+      onLoadSuccess={onDocumentLoadSuccess}
+    >
+      {Array.from(new Array(numPages), (el, index) => (
+        <Page key={`page_${index + 1}`} pageNumber={index + 1} />
+      ))}
+    </Document>
+  );
+};
+
+
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -53,6 +78,7 @@ const Landing = () => {
   ];
   return (
     <>
+  
       <div className="flex flex-col items-center h-full pt-24 md:flex-row">
         <div className="flex items-center justify-center flex-grow w-1/2 h-full">
           {is3DModelActivated ? (
@@ -157,9 +183,9 @@ const Landing = () => {
       )}
       {currentPdf && (
   <div className="pdf-viewer">
-    <iframe src={currentPdf} width="100vw" height="500px" style={{ border: "none" }} title="PDF Viewer"></iframe>
-    <button onClick={() => setCurrentPdf(null)} className="pdf-close-button">Close PDF</button>
-  </div>
+  <PdfViewer pdf={currentPdf} />
+  <button onClick={() => setCurrentPdf(null)} className="pdf-close-button">Close PDF</button>
+</div>
 )}
     </div>
   </RecipeModal>

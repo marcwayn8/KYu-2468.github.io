@@ -15,10 +15,11 @@
     background: white;
     padding: 20px;
     border-radius: 4px;
-    width: 100vw;
-    max-width: 900px;
     z-index: 11;
     font-size: medium;
+    width: 80vw; /* 80% of the viewport width */
+  height: 80vh; /* 80% of the viewport height */
+  overflow: auto;
   }
   
   .modal-close-button {

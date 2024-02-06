@@ -95,3 +95,15 @@ body {
   flex-direction: column; /* Aligns children vertically */
   /* Other styling as needed */
 }
+.pdf-viewer {
+  width: 100%; /* Adjust width as necessary */
+  height: 100vh; /* Adjust height as necessary */
+  position: relative; /* For positioning the close button */
+}
+
+.pdf-close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* Other styles for the close button */
+}

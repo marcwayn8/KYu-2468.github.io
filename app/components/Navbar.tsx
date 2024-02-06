@@ -62,12 +62,12 @@ const Navbar = ({ sections }: SectionProps) => {
         {sections.map((sectionProp: SectionProp) => (
           <NavbarBtn key={sectionProp.id} {...sectionProp} />
         ))}
-        {isDarkMode ? (
+      </div>
+      {isDarkMode ? (
           <SunBtn setIsDarkMode={setIsDarkMode} />
         ) : (
           <MoonBtn setIsDarkMode={setIsDarkMode} />
         )}
-      </div>
     </div>
   );
 };

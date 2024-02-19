@@ -14,7 +14,8 @@
   .modal-content {
     background: white;
     padding: 20px;
- 
+    background-image: linear-gradient(to right, red, green, black);
+    color: white; /* Adjust the text color for better visibility */
       width: 100vw; /* Full viewport width */
       height: 100vh; /* Full viewport height */
       display: flex; /* To center the content */
@@ -48,13 +49,6 @@
     transform: scale(1.1);
   }
   
- 
-  .modal-content {
-    /* ...existing styles... */
-    background-image: linear-gradient(to right, red, green, black);
-    color: white; /* Adjust the text color for better visibility */
-    /* ... */
-  }
 
   .modal-title {
     margin-top: 0;

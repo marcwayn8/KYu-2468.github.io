@@ -96,10 +96,14 @@ body {
   /* Other styling as needed */
 }
 .pdf-viewer {
+  display: flex;
+  justify-content: center;
   width: 100%; /* Adjust width as necessary */
   height: 100vh; /* Adjust height as necessary */
   position: relative; /* For positioning the close button */
 }
+
+/* Ensure the modal itself is also taking full width and height if it's not already doing so */
 
 .pdf-close-button {
   position: absolute;

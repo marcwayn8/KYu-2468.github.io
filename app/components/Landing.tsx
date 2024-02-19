@@ -49,18 +49,19 @@ const onDocumentLoadSuccess = (pdf: { numPages: number }) => {
 
 const PdfViewer = ({ pdf }: { pdf: string }) => {
   return (
-    <Document
-      file={pdf}
-      onLoadSuccess={onDocumentLoadSuccess}
-    >
-      {Array.from(new Array(numPages), (el, index) => (
-        <Page key={`page_${index + 1}`} pageNumber={index + 1} />
-      ))}
-    </Document>
+    <div className="pdf-viewer">
+      <Document
+        file={pdf}
+        onLoadSuccess={onDocumentLoadSuccess}
+        className="w-full h-full" // Add full width and height to the Document
+      >
+        {Array.from(new Array(numPages), (el, index) => (
+          <Page key={`page_${index + 1}`} pageNumber={index + 1} className="w-full h-auto" /> // Ensure each page takes the full width and auto height
+        ))}
+      </Document>
+    </div>
   );
 };
-
-
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {

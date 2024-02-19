@@ -14,11 +14,17 @@
   .modal-content {
     background: white;
     padding: 20px;
+ 
+      width: 100vw; /* Full viewport width */
+      height: 100vh; /* Full viewport height */
+      display: flex; /* To center the content */
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      /* Add any additional styles for background, padding, etc. */
+  
     border-radius: 4px;
-    z-index: 11;
     font-size: medium;
-    width: 80vw; /* 80% of the viewport width */
-  height: 80vh; /* 80% of the viewport height */
+
   overflow: auto;
   }
   

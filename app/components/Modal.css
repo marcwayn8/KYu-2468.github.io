@@ -18,9 +18,7 @@
     color: white; /* Adjust the text color for better visibility */
       width: 100vw; /* Full viewport width */
       height: 100vh; /* Full viewport height */
-      display: flex; /* To center the content */
-      justify-content: center; /* Center horizontally */
-      align-items: center; /* Center vertically */
+     
       /* Add any additional styles for background, padding, etc. */
   
     border-radius: 4px;

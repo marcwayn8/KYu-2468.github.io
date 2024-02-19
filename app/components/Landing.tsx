@@ -7,19 +7,13 @@ import { TypeAnimation } from "react-type-animation";
 import Calendly from "./Calendly";
 import LoadingTriangle from "./Loading/LoadingTriangle";
 import ButtonWrapper from "./Button/ButtonWrapper";
-const profileImg = "./img/profile-img.jpg";
-const KevinAvatar = lazy(() => import("./KevinAvatar"));
 import { infos,quotes } from "../data/about";
-const image5 = "./img/5.jpg";
 import RecipeModal from './Modal';
 import ackeeAndSaltfishPdf from '../data/recipes/ackee_saltfish.pdf';
 import ovenfriedChickenpdf from '../data/recipes/over_fried.pdf';
-import { Document, Page } from 'react-pdf';
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-
-// Set up PDF.js worker
-import  pdfjs from 'pdfjs-dist';
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+const profileImg = "./img/profile-img.jpg";
+const KevinAvatar = lazy(() => import("./KevinAvatar"));
+const image5 = "./img/5.jpg";
 
 
 const Landing = () => {
@@ -32,14 +26,14 @@ const Landing = () => {
   const [currentPdf, setCurrentPdf] = useState<string | null>(null);
 
   const openPdf = (pdfName: string) => {
-    const pdfMap: { [key: string]: any } = {
-      'ackeeAndSaltfish': ackeeAndSaltfishPdf,
-      'ovenFriedChicken': ovenfriedChickenpdf,
-    
+    const pdfMap: { [key: string]: string } = {
+      'ackeeAndSaltfish': 'https://minewayne.s3.amazonaws.com/ackee_saltfish.pdf',
+      'ovenFriedChicken': 'https://minewayne.s3.amazonaws.com/over_fried.pdf',
     };
    
-  setCurrentPdf(pdfMap[pdfName]);
-};
+    setCurrentPdf(pdfMap[pdfName]);
+  };
+  
 
 const [numPages, setNumPages] = useState<number | null>(null);
 
@@ -47,19 +41,21 @@ const onDocumentLoadSuccess = (pdf: { numPages: number }) => {
   setNumPages(pdf.numPages);
 };;
 
-const PdfViewer = ({ pdf }: { pdf: string }) => {
+interface GoogleDocsViewerProps {
+  pdfUrl: string;
+}
+
+const GoogleDocsViewer: React.FC<GoogleDocsViewerProps> = ({ pdfUrl }) => {
+  const viewerUrl = `https://docs.google.com/viewer?embedded=true&url=${pdfUrl}`;
+
   return (
-    <div className="pdf-viewer">
-      <Document
-        file={pdf}
-        onLoadSuccess={onDocumentLoadSuccess}
-        className="w-full h-full" // Add full width and height to the Document
-      >
-        {Array.from(new Array(numPages), (el, index) => (
-          <Page key={`page_${index + 1}`} pageNumber={index + 1} className="w-full h-auto" /> // Ensure each page takes the full width and auto height
-        ))}
-      </Document>
-    </div>
+    <iframe
+      src={viewerUrl}
+      width="100%"
+      height="100%"
+      frameBorder="0"
+      style={{ border: 'none', minHeight: '500px' }}
+    ></iframe>
   );
 };
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -178,19 +174,21 @@ const PdfViewer = ({ pdf }: { pdf: string }) => {
       </button>
       {dropdownOpen && (
         <div className="dropdown-content">
-        <button onClick={() => {setCurrentPdf(ackeeAndSaltfishPdf)}} className="recipe-item">Ackee and Saltfish</button>
+          <button onClick={() => {setCurrentPdf(ackeeAndSaltfishPdf)}} className="recipe-item">Ackee and Saltfish</button>
           <button onClick={() => {setCurrentPdf(ovenfriedChickenpdf)}} className="recipe-item">Oven Fried Chicken</button>
         </div>
       )}
       {currentPdf && (
-  <div className="pdf-viewer">
-  <PdfViewer pdf={currentPdf} />
-  <button onClick={() => setCurrentPdf(null)} className="pdf-close-button">Close PDF</button>
-</div>
-)}
+        <div className="pdf-viewer">
+          {/* Replace PdfViewer with GoogleDocsViewer */}
+          <GoogleDocsViewer pdfUrl={currentPdf} />
+          <button onClick={() => setCurrentPdf(null)} className="pdf-close-button">Close PDF</button>
+        </div>
+      )}
     </div>
   </RecipeModal>
 )}
+
     </>
   );
 };

@@ -98,6 +98,7 @@ body {
 .pdf-viewer {
   display: flex;
   justify-content: center;
+  margin: auto;
   width: 100%; /* Adjust width as necessary */
   height: 100vh; /* Adjust height as necessary */
   position: relative; /* For positioning the close button */

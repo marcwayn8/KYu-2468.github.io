@@ -71,7 +71,7 @@ const Navbar = ({ sections }: SectionProps) => {
           <NavbarBtn key={sectionProp.id} {...sectionProp} />
         ))}
       </div>
-      <div className="md:hidden"> {/* Hide on medium and larger screens */}
+      <div className="md:hidden lg:hidden"> {/* Hide on medium and larger screens */}
         <button onClick={toggleTheme} className="p-2">
           {isDarkMode ? '🌙' : '☀️'}
         </button>

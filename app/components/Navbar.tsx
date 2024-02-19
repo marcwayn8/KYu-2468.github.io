@@ -33,6 +33,14 @@ const Navbar = ({ sections }: SectionProps) => {
     }
   }, [isDarkMode]);
 
+  const toggleTheme = () => {
+    const newIsDarkMode = !isDarkMode;
+    setIsDarkMode(newIsDarkMode);
+    localStorage.theme = newIsDarkMode ? "dark" : "light";
+    document.documentElement.classList.toggle("dark", newIsDarkMode);
+  };
+
+
   return (
     <div className="fixed z-10 flex items-center justify-between w-screen h-16 text-white bg-black dark:bg-neutral-800 px-4 md:px-12 navbar">
       {/* Hide the non-social elements on small screens */}
@@ -62,6 +70,11 @@ const Navbar = ({ sections }: SectionProps) => {
         {sections.map((sectionProp: SectionProp) => (
           <NavbarBtn key={sectionProp.id} {...sectionProp} />
         ))}
+      </div>
+      <div className="md:hidden"> {/* Hide on medium and larger screens */}
+        <button onClick={toggleTheme} className="p-2">
+          {isDarkMode ? '🌙' : '☀️'}
+        </button>
       </div>
       {isDarkMode ? (
           <SunBtn setIsDarkMode={setIsDarkMode} />

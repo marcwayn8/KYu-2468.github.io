@@ -109,6 +109,6 @@ body {
 .pdf-close-button {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   /* Other styles for the close button */
 }

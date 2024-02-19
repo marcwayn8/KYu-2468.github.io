@@ -1,11 +1,4 @@
 
-
-<p align="center">
-  <a href="https://kevin-yu.vercel.app/">
-    <img alt="Demo" width="600" src="./src/assets/img/portfolio.gif">
-  </a>
-</p>
-
 🚀 [See it live](https://jamaicancoder.vercel.app)
 
 ## 📦 Built from scratch With

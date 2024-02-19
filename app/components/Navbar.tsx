@@ -51,7 +51,7 @@ const Navbar = ({ sections }: SectionProps) => {
       </div>
 
       {/* Social icons container - always visible, but with responsive adjustments */}
-      <div className="social-icons flex justify-center items-center grow sm:justify-center md:justify-end">
+      <div className="social-icons flex justify-center items-center grow sm:justify-center md:justify-center">
         {/* Social icons */}
         <a href="https://jamaicancoder.myshopify.com/" className="mx-2">
           <FontAwesomeIcon icon={faShopify} size="lg" />

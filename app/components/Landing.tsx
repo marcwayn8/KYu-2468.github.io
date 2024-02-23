@@ -121,12 +121,7 @@ const GoogleDocsViewer: React.FC<GoogleDocsViewerProps> = ({ pdfUrl }) => {
               linkURL="https://www.linkedin.com/in/waynemarch/"
             />
 
-            <ContactButton
-              text="GitHub"
-              textColor="text-white"
-              buttonColor="bg-black dark:bg-neutral-800"
-              linkURL="https://github.com/marcwayn8"
-            />
+          
     <ContactButton
               text="Spotify"
               textColor="text-blue"

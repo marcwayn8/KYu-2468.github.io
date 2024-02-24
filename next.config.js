@@ -1,32 +1,30 @@
-/**
- * @type {import('next').NextConfig}
- */
 const nextConfig = {
-  webpack(config, options) {
-    // Add the custom rule for handling .pdf files
+  webpack(config, { isServer }) {
+    // Override the Webpack config only for client-side builds
+    if (!isServer) {
+      // Provide fallbacks for 'fs' and 'canvas' modules to prevent errors in client-side bundle
+      config.resolve.fallback = {
+        fs: false,
+        canvas: false, // Exclude 'canvas' from the client-side bundle
+      };
+    }
+
+    // Rule for handling .pdf files
     config.module.rules.push({
       test: /\.pdf$/,
       use: [
         {
           loader: 'file-loader',
           options: {
-            publicPath: '/_next/static/files',
-            outputPath: 'static/files',
-            name: '[name].[ext]',
+            publicPath: '/_next/static/files', // Define where to serve the files from
+            outputPath: 'static/files', // Define the output path for the files
+            name: '[name].[ext]', // Keep the original file name and extension
           },
         },
       ],
     });
 
-    // Add a fallback for the 'canvas' module if it's not server-side
-    if (!options.isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback, // Preserve existing fallbacks (if any)
-        canvas: false, // Provide an empty module for 'canvas' on the client-side
-      };
-    }
-
-    return config;
+    return config; // Return the modified configuration
   },
 };
 

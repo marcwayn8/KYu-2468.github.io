@@ -11,10 +11,16 @@ import { infos,quotes } from "../data/about";
 import RecipeModal from './Modal';
 import ackeeAndSaltfishPdf from '../data/recipes/ackee_saltfish.pdf';
 import ovenfriedChickenpdf from '../data/recipes/over_fried.pdf';
+import dynamic from 'next/dynamic';
+const PDFViewer = dynamic(() => import('./pdf'), {
+  ssr: false, // This line is key!
+});
+
+
+
 const profileImg = "./img/profile-img.jpg";
 const KevinAvatar = lazy(() => import("./KevinAvatar"));
 const image5 = "./img/5.jpg";
-
 
 const Landing = () => {
   const [is3DModelActivated, setIs3DModelActivated] = useState(false);
@@ -34,30 +40,6 @@ const Landing = () => {
     setCurrentPdf(pdfMap[pdfName]);
   };
   
-
-const [numPages, setNumPages] = useState<number | null>(null);
-
-const onDocumentLoadSuccess = (pdf: { numPages: number }) => {
-  setNumPages(pdf.numPages);
-};;
-
-interface GoogleDocsViewerProps {
-  pdfUrl: string;
-}
-
-const GoogleDocsViewer: React.FC<GoogleDocsViewerProps> = ({ pdfUrl }) => {
-  const viewerUrl = `https://docs.google.com/viewer?embedded=true&url=${pdfUrl}`;
-
-  return (
-    <iframe
-      src={viewerUrl}
-      width="100%"
-      height="100%"
-      frameBorder="0"
-      style={{ border: 'none', minHeight: '500px' }}
-    ></iframe>
-  );
-};
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -175,14 +157,18 @@ const GoogleDocsViewer: React.FC<GoogleDocsViewerProps> = ({ pdfUrl }) => {
       {dropdownOpen && (
         <div className="dropdown-content">
           <button onClick={() => {setCurrentPdf(ackeeAndSaltfishPdf)}} className="recipe-item">Ackee and Saltfish</button>
-          <button onClick={() => {setCurrentPdf(ovenfriedChickenpdf)}} className="recipe-item">Oven Fried Chicken</button>
+          <button onClick={() => {setCurrentPdf(ovenfriedChickenpdf)}} className="recipe-item">Oven Fried Jerk Chicken</button>
         </div>
       )}
       {currentPdf && (
         <div className="pdf-viewer">
           {/* Replace PdfViewer with GoogleDocsViewer */}
-          <GoogleDocsViewer pdfUrl={currentPdf} />
-          <button onClick={() => setCurrentPdf(null)} className="pdf-close-button">Close PDF</button>
+          {currentPdf && (
+        <Suspense fallback={<div>Loading PDF...</div>}>
+          <PDFViewer  pdfUrl={currentPdf} />
+        </Suspense>
+      )}
+          {/* <button onClick={() => setCurrentPdf(null)} className="pdf-close-button">Close PDF</button> */}
         </div>
       )}
     </div>

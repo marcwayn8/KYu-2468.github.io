@@ -38,13 +38,11 @@ const Info = () => {
       <Title>Full-Stack Software Engineer</Title>
       <div className="flex flex-wrap">
         <Content>
-          Meet Wayne, a software engineer at Verisk Analytics with 2+ years in software engineering.
-          A graduate from the Marcy Lab School Software Engineering Bootcamp, a 1-year alternative to college.Wayne currently ranks in the top 8.4% among 393,066 global
-          contestants in LeetCode's Global Competitive programming competition.
-          Wayne values collaboration, positivity, and a non-toxic work
-          environment, and enjoys researching solutions and debugging. He is
+          Meet Wayne, a Software Engineer at Verisk with 2+ years of experience in software engineering.
+          Wayne values collaboration, positivity, and enjoys researching solutions and debugging. He is
           passionate about contributing to industries with a positive impact on
-          people's well-being and could be a great addition to your team.
+          people's well-being.Outside of work, I enjoy playing Soccer,reading 
+          and volunteering.
         </Content>
  
       </div>

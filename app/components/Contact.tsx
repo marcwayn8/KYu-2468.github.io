@@ -35,24 +35,24 @@ const Contact = () => {
           buttonColor="bg-red-600"
           linkURL="https://leetcode.com/marcwayn/"
         />
-        <ContactButton
+        {/* <ContactButton
           text="Shopify"
           textColor="text-white"
           buttonColor="bg-green-600"
           linkURL="https://jamaicancoder.myshopify.com/"
-        />
+        /> */}
          <ContactButton
           text="Youtube"
           textColor="text-white"
           buttonColor="bg-green-600"
           linkURL="https://youtube.com/@jamaicancoder6278?si=BkN8poPlOYqcvifQ"
         />
-         <ContactButton
+         {/* <ContactButton
           text="TikTok"
           textColor="text-white"
           buttonColor="bg-green-600"
           linkURL="tiktok.com/@juniormarch"
-        />
+        /> */}
       </div>
     </>
   );

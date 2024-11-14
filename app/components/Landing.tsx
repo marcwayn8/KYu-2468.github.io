@@ -79,7 +79,7 @@ const Landing = () => {
                 2000,
                 "I'm driven and enthusiastic 🧠",
                 1000,
-                "I'm a full stack engineer 📱",
+                "I'm a full stack engineer and Licensed Real Estate Agent In NYC📱",
                 2000,
                 "I'm fueled by curiosity and passion 🧐",
                 2000,
@@ -116,6 +116,13 @@ const Landing = () => {
               buttonColor="bg-black dark:bg-neutral-800"
               linkURL="https://medium.com/@juniormarch48"
             />
+             <ContactButton
+              text="Real Estate"
+              textColor="text-blue"
+              buttonColor="bg-black dark:bg-neutral-800"
+              linkURL="https://waynemarch.kw.com"
+            />
+    
     
             <Calendly />
            <ButtonWrapper> <button onClick={toggleRecipeModal} className="recipe-button" >

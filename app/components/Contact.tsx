@@ -28,13 +28,6 @@ const Contact = () => {
           buttonColor="bg-black dark:bg-neutral-800"
           linkURL="https://github.com/marcwayn8"
         />
-
-        <ContactButton
-          text="LeetCode"
-          textColor="text-white"
-          buttonColor="bg-red-600"
-          linkURL="https://leetcode.com/marcwayn/"
-        />
         <ContactButton
           text="Real Estate"
           textColor="text-white"
@@ -59,6 +52,11 @@ const Contact = () => {
           buttonColor="bg-green-600"
           linkURL="tiktok.com/@juniormarch"
         /> */}
+         <div className="pb-12 mx-6 text-lg md:mx-16 md:text-xl">
+        Business Email: marcwayn84@gmail.com
+        Business Phone: (347) 670-4768
+        Business Address: 2810 N Church St #270756, Wilmington Delaware
+      </div>
       </div>
     </>
   );

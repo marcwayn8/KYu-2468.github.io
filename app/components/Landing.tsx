@@ -102,20 +102,6 @@ const Landing = () => {
               buttonColor="bg-sky-600"
               linkURL="https://www.linkedin.com/in/waynemarch/"
             />
-
-          
-    <ContactButton
-              text="Spotify"
-              textColor="text-blue"
-              buttonColor="bg-black dark:bg-neutral-800"
-              linkURL="https://open.spotify.com/show/2SGKYo1m3F74IDzeFb7sh3?si=112d2be093c34efb"
-            />
-            <ContactButton
-              text="Medium"
-              textColor="text-blue"
-              buttonColor="bg-black dark:bg-neutral-800"
-              linkURL="https://medium.com/@juniormarch48"
-            />
              <ContactButton
               text="Real Estate"
               textColor="text-blue"

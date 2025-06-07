@@ -5,17 +5,15 @@ interface ButtonProp {
   buttonColor: string;
   text: string;
   textColor: string;
-  linkURL: string;
 }
 
 export default function ProjectButtonn({
   buttonColor,
   text,
   textColor,
-  linkURL,
 }: ButtonProp) {
   return (
-    <a href={linkURL}>
+    <a href={""}>
       <ButtonWrapper>{text}</ButtonWrapper>
     </a>
   );

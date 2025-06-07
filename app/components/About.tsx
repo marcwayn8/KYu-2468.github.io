@@ -35,11 +35,11 @@ const Image = () => {
 const Info = () => {
   return (
     <div className="flex flex-col items-center w-full h-auto px-4 mt-4 md:w-1/2 md:px-12">
-      <Title>Full-Stack Software Engineer</Title>
+      <Title>Software Engineer</Title>
       <div className="flex flex-wrap">
         <Content>
-          Meet Wayne, a Software Engineer at Verisk with 2+ years of experience in software engineering.
-          Wayne values collaboration, positivity, and enjoys researching solutions and debugging. He is
+          Meet Wayne, a Software Engineer with 2+ years of experience in software engineering.
+          Wayne values collaboration,coding challenges, and enjoys researching solutions and debugging. He is
           passionate about contributing to industries with a positive impact on
           people's well-being.Outside of work, I enjoy playing Soccer,reading 
           and volunteering.

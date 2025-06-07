@@ -13,24 +13,24 @@ const projects: SingleProject[] = [
     name: "Chart My Jog",
     description:
       "Chart My Jog is a fitness application built with React, Tailwind, Material UI, Firebase, Firestore, Mapbox API, Leaflet, React-leaflet, and Geolocation API. Chart My Jog helps users track and record their jogs in real-time and render their route on a digital map. Users can view and share their accomplishments and track their progress throughout their lifetime.",
-    github: "https://github.com/KYu-2468/ChartMyJog",
-    website: "https://chart-my-jog.web.app/",
+    // github: "https://github.com/KYu-2468/ChartMyJog",
+    // website: "https://chart-my-jog.web.app/",
     video: chartMyJog,
   },
   {
     name: "RF Training",
     description:
       "RF Traning Website is an independent project built with React, Tailwind, Windmill, and Firebase. It enabled new SGS hires (Interns, Technicians, and Engineers) to learn 4G/5G RF system operations, improved the efficiency of the onboarding process by 55%, and reduced the cost of training by 65%. Firebase Authentication and Storage Security rules are implemented to protect sensitive materials from unauthorized personnel.",
-    github: "https://github.com/KYu-2468/RF-Training",
-    website: "https://rf-training-sgs.web.app/",
+    // github: "https://github.com/KYu-2468/RF-Trainig",
+    // website: "https://rf-training-sgs.web.app/",
     video: rfTrainingSGS,
   },
   {
     name: "NetfliK",
     description:
       "Netflix is one of the most popular streaming services currently available in the market. Netflik is built with React, Tailwind, TMDB API, React-Youtube, and AWS Amplify. All current videos are trailers of the corresponding movies.",
-    github: "https://github.com/KYu-2468/netflixk",
-    website: "https://prod.d3w3n4pah8m9bk.amplifyapp.com",
+    // github: "https://github.com/KYu-2468/netflixk",
+    // website: "https://prod.d3w3n4pah8m9bk.amplifyapp.com",
     video: netflik,
   },
   // {

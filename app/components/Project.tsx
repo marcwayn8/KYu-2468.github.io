@@ -5,23 +5,17 @@ import Content from "./Typography/Content";
 export interface SingleProject {
   name: string;
   description: string;
-  github: string;
-  website: string;
   video: any;
 }
 
 interface InfoProp {
   name: String;
   description: string;
-  github: string;
-  website: string;
 }
 
 const Project = ({
   name,
   description,
-  github,
-  website,
   video,
 }: SingleProject) => {
   return (
@@ -38,15 +32,13 @@ const Project = ({
         <Info
           name={name}
           description={description}
-          github={github}
-          website={website}
         />
       </div>
     </>
   );
 };
 
-const Info = ({ description, github, website }: InfoProp) => {
+const Info = ({ description }: InfoProp) => {
   return (
     <div className="flex flex-col items-center justify-center mt-4 text-base md:mt-0 xl:w-1/3 xl:justify-center md:p-4 rounded-xl">
       <Content>{description}</Content>
@@ -55,7 +47,6 @@ const Info = ({ description, github, website }: InfoProp) => {
           buttonColor="bg-black dark:bg-neutral-800"
           text="GitHub"
           textColor="text-white"
-          linkURL={github}
         />
         {/* <ProjectButtonn
           buttonColor="bg-blue-700"

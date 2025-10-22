@@ -34,7 +34,7 @@ const Contact = () => {
           buttonColor="bg-green-600"
           linkURL="https://waynemarch.kw.com"
         />
-        <ContactButton
+        {/* <ContactButton
           text="Fiverr"
           textColor="text-white"
           buttonColor="bg-sky-600"
@@ -45,7 +45,7 @@ const Contact = () => {
           textColor="text-white"
           buttonColor="bg-green-600"
           linkURL="https://youtube.com/@jamaicancoder6278?si=BkN8poPlOYqcvifQ"
-        />
+        /> */}
          {/* <ContactButton
           text="TikTok"
           textColor="text-white"

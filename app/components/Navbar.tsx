@@ -62,9 +62,9 @@ const Navbar = ({ sections }: SectionProps) => {
         <a href="https://www.tiktok.com/@juniormarch" className="mx-2">
           <FontAwesomeIcon icon={faTiktok} size="lg" />
         </a> */}
-        <a href="https://youtube.com/@jamaicancoder6278?si=BkN8poPlOYqcvifQ" className="mx-2">
+        {/* <a href="https://youtube.com/@jamaicancoder6278?si=BkN8poPlOYqcvifQ" className="mx-2">
           <FontAwesomeIcon icon={faYoutube} size="lg" />
-        </a>
+        </a> */}
       </div>
       <div className="navbar-sections hidden sm:flex text-lg grow flex-nowrap md:text-2xl justify-evenly">
         {sections.map((sectionProp: SectionProp) => (
